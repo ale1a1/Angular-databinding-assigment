@@ -1,6 +1,9 @@
 <div class="container">
   <app-instructions></app-instructions>
-  <app-game-control></app-game-control>
+  <app-game-control
+    (startGame)="onGameStarted()"
+    (stopGame)="onGameStopped()"
+  ></app-game-control>
   <app-odd></app-odd>
   <app-even></app-even>
 </div>

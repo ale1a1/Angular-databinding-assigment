@@ -1,10 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-game-control',
   templateUrl: './game-control.component.html',
-  styleUrls: ['./game-control.component.css']
+  styleUrls: ['./game-control.component.css'],
 })
 export class GameControlComponent {
-
+  @Output() startGame = new EventEmitter();
+  @Output() stopGame = new EventEmitter();
+  onStartGame() {
+    this.startGame.emit();
+  }
+  onStopGame() {
+    this.stopGame.emit();
+  }
 }
