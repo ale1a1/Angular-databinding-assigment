@@ -1,6 +1,12 @@
 <div class="controller">
-  <button class="btn btn-warning" (click)="onStartGame()">
+  <button
+    class="btn btn-success"
+    (click)="onStartGame()"
+    *ngIf="!isGameRunning"
+  >
     Start the game
   </button>
-  <button class="btn btn-warning" (click)="onStopGame()">Stop the game</button>
+  <button class="btn btn-warning" (click)="onStopGame()" *ngIf="isGameRunning">
+    Stop the game
+  </button>
 </div>

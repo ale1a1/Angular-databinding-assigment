@@ -1,5 +1,5 @@
 <div class="resetGame">
-  <button class="btn btn-warning" (click)="onResetGame()">
+  <button *ngIf="hasGameStarted" class="btn btn-danger" (click)="onResetGame()">
     Reset the game
   </button>
 </div>

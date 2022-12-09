@@ -7,19 +7,24 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   number = 0;
+  isGameRunning = false;
+  hasGameStarted = false;
   oddNumbers = [];
   evenNumbers = [];
   interval;
 
   onGameStarted() {
+    this.isGameRunning = true;
+    this.hasGameStarted = true;
     this.interval = setInterval(() => {
-      console.log(this.number), this.checkNumber(), this.number++;
+      this.checkNumber();
+      this.number++;
     }, 1000);
   }
 
   onGameStopped() {
     clearInterval(this.interval);
-    console.log(this.number);
+    this.isGameRunning = false;
   }
 
   onGameReset() {

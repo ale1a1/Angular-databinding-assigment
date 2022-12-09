@@ -3,11 +3,15 @@
   <app-game-control
     (startGame)="onGameStarted()"
     (stopGame)="onGameStopped()"
+    [isGameRunning]="isGameRunning"
   ></app-game-control>
 
   <div class="numbers">
     <app-odd [oddNumbers]="oddNumbers"></app-odd>
     <app-even [evenNumbers]="evenNumbers"></app-even>
   </div>
-  <app-reset-game (resetGame)="onGameReset()"></app-reset-game>
+  <app-reset-game
+    [hasGameStarted]="hasGameStarted"
+    (resetGame)="onGameReset()"
+  ></app-reset-game>
 </div>
