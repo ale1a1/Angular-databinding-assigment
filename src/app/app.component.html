@@ -4,6 +4,10 @@
     (startGame)="onGameStarted()"
     (stopGame)="onGameStopped()"
   ></app-game-control>
-  <app-odd></app-odd>
-  <app-even></app-even>
+
+  <div class="numbers">
+    <app-odd [oddNumbers]="oddNumbers"></app-odd>
+    <app-even [evenNumbers]="evenNumbers"></app-even>
+  </div>
+  <app-reset-game (resetGame)="onGameReset()"></app-reset-game>
 </div>

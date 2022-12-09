@@ -1,3 +1,9 @@
 button {
   margin: 1rem;
 }
+
+.controller {
+  margin: 2rem 7rem;
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,5 @@
+.numbers {
+  margin: 2rem 7rem;
+  display: flex;
+  justify-content: space-between;
+}
